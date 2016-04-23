@@ -29,7 +29,7 @@ Space Complexity: O(n), to store all the unqiue chars in our counts dictionary
 #And in case you want to convert back after playing with the number, function chr() does the trick.	
 def has_unique_chars_2(str):
 	if len(str) > 256:
-		return False
+		return False	
 	char_set = [False for i in range(256)] # list comprehension, for creating a boolean array all initialized to false
 	for i in range(0, len(str)):
 		char_val = ord(str[i])
@@ -44,6 +44,11 @@ assert has_unique_chars_2("HIiiH") == False
 print has_unique_chars_2("HiI")
 assert has_unique_chars_2("HiI") == True
 	
+'''
+Input is a string of length n
+Time Complexity: O(n), since in the worst case we need to look at the entire string 
+Space Complexity: O(1), to count duplicate chars, we only need storage for all the possible chars. (Which is 256, which is a constant)
+'''
 
 
 #What if you cannot use additional data structures?
