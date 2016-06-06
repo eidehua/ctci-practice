@@ -1,0 +1,8 @@
+Big O chapter in CTCI.
+
+Big O (upper bound), Big Theta (lower bound), and Big Omega (tight bound). Industry uses tight bound to mean big Omega
+Best, worst, and expected cases describe the big O time for particular inputs or scenarios.
+Big O describes a bound for runtime
+
+Space Complexity
+Stack space in recursive calls counts! 

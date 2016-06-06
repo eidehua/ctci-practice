@@ -37,8 +37,12 @@ Order of focus: Main chapters
 (less useful) Testing: test stuff. Unit tests, etc...
 
 Order of focus: Other chapters:
+
 (vital) hard problems
+
 (important) advanced topics
+
 (important) code library
+
 (important) moderate problems
 
