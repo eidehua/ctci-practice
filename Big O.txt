@@ -5,4 +5,12 @@ Best, worst, and expected cases describe the big O time for particular inputs or
 Big O describes a bound for runtime
 
 Space Complexity
-Stack space in recursive calls counts! 
+Stack space in recursive calls counts! This is because recursive calls add a level to the stack, so the calls exist simulatenously on the call stack, and at the base case you have O(x) (where x is the space complexity) space used on the stack
+
+O(N) may not be always better than O(N^2) depending on the specific inputs and constants, but we really only care about the rate of increase (measuring the effect when inputs are large)
+
+If algorithm is of form "do this, then when you are all done, do that" add the runtimes
+If algorithm is of form "do this for each time you do that, then multiply the runtimes"
+
+Amortized time: worst case happens every once in a while, but won't happen again for a long time after so cost is "amortized"
+X insertions take O(2X) time. Amortized time for each insertion is O(1)
