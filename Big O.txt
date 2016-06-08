@@ -23,3 +23,10 @@ Log N Runtimes: cutting problem in half every time!
     In binary search, it is how many divisions by 2 until N becomes one
     OR think of it as: how many multiplications by 2 starting at 1 until we get to N
     eg 2^k = N -> k = log_2(N)
+    k multiplications
+    log_2(N) multiplications
+    
+  What if we divided size by 3 every time? By 4? etc?? 
+  
+Recursive runtimes: THIS IS HARD!! 
+  Tree method
