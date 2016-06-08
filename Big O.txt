@@ -29,4 +29,8 @@ Log N Runtimes: cutting problem in half every time!
   What if we divided size by 3 every time? By 4? etc?? 
   
 Recursive runtimes: THIS IS HARD!! 
-  Tree method
+  Tree method 
+    Root = original function call f(N). f(N) should call some functions itself, those will be the children of f(N) and the next level
+  Usually when a recursive function makes multiple calls, the runtime will be O(branches^{depth}) !!
+  EG O(2^n)
+  Base matters for exponential run times! 2^n vs 8^n -> 2^n vs (2^3)^n -> 2^n vs 2^2n * 2^n
