@@ -14,3 +14,12 @@ If algorithm is of form "do this for each time you do that, then multiply the ru
 
 Amortized time: worst case happens every once in a while, but won't happen again for a long time after so cost is "amortized"
 X insertions take O(2X) time. Amortized time for each insertion is O(1)
+
+Log N Runtimes: cutting problem in half every time!
+  Example: binary search: finding element x in an sorted array of size N. Compare x with the midpoint. if x == midpoint, we found x!
+  otherwise, if x < middle, then we search the first half of array for x. If x > middle, we search the right half for x.
+  When we are at 2 elements, midpoint is (1-0)/2 = 0.5 --> rounds to 0 (so first element of the two is the "middle" element)
+  Total runtime = how many steps until N becomes 1?
+    In binary search, it is how many divisions by 2 until N becomes one
+    OR think of it as: how many multiplications by 2 starting at 1 until we get to N
+    eg 2^k = N -> k = log_2(N)
