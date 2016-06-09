@@ -34,3 +34,5 @@ Recursive runtimes: THIS IS HARD!!
   Usually when a recursive function makes multiple calls, the runtime will be O(branches^{depth}) !!
   EG O(2^n)
   Base matters for exponential run times! 2^n vs 8^n -> 2^n vs (2^3)^n -> 2^n vs 2^2n * 2^n
+
+Hard examples:
