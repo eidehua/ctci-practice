@@ -36,3 +36,53 @@ Recursive runtimes: THIS IS HARD!!
   Base matters for exponential run times! 2^n vs 8^n -> 2^n vs (2^3)^n -> 2^n vs 2^2n * 2^n
 
 Hard examples:
+Example 8: 
+  Algorithm that took in an array of strings, sorted each string, and then sorted the array. Be careful here, there are several different "n" we need to deal with.
+  Let s be length of longest string
+  Let a be length of array
+  Sorting one string: O(s log s)
+  Sorting all strings: O(a * s log s)
+  Sorting on N elements is usually a O(N log N) operation, but be careful! We are sorting strings, not the usually integers!
+  All sorting algorithms compares the elements of the array to continue. Integer comparison takes O(1) time, but string comparision takes O(s) time
+  To sort all the strings, then it would take O(a*s log a) time, since a sorting algorithm on an array of length a has O(a log a) comparisons
+
+  So total run time is O(a * s log s) + O(a * s log a) = O(a*s(log a + log s))
+
+  What to remember: SORTING ALGORITHMS on an array of length a does O(a log a) COMPARISONS, the total runtime of the sort depends on how long each comparison takes!
+
+Example 12:
+  void permutation(String str) {
+    permutation(str, "");
+  }
+
+  void permutation(String str, String prefix) {
+    if (str.length() == 0 ) {
+      System.out.println(prefix);
+    } else {
+      for (int i = 0; i < str.length(); i++) {
+        String rem = str.substring(0, i) + str.substring(i+1);
+        permutation(rem, prefix + str.charAt(i));
+      }
+    }
+  }
+
+  ** How many times does permutation get called in its base case? If we have a string of length N, how many permutations do we have? N!
+  We have N! calls to permutation in base case, where prefix is the full permutation (prefix stores permutations)
+  EG: 7 characters in a string. In first "slot" we can place any of the 7 characters. Then we have 6 choices for the second slot (for each of the 7 choices). 
+  Total number of options is 7*6*5*4*3*2*1 = 7!
+  This means we have n! leaves. Each leaf is attached to a path of length n (since prefix length increases by 1 every time) 
+    No more than n*n! nodes (function calls) in the tree
+  Each function call takes O(n) time-- 
+    O(n) to print prefix
+    O(n) for string concatenation (creating string rem)
+    *note we do not consider the for loop here -- that could be different way to evaluate the runtime. 
+    *the reason we don't consider the for loop explicitly is because it is considered in the number of nodes in the tree (helps to generate the permutations, it is considered part of the runtime of the permutations)
+
+  Total work is O(n^2 * n!)
+    
+
+  temp -> "t" emp -> "te" mp    ANOTHER BRANCH: temp -> "e" tmp -> "et" mp memoization won't help???
+  might need another algorithm to find best runtime O(n*n!)
+  https://www.quora.com/What-is-the-fastest-algorithm-to-find-all-possible-permutations-of-a-string
+
+  
