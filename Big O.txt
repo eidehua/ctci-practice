@@ -79,8 +79,7 @@ Example 12:
     *the reason we don't consider the for loop explicitly is because it is considered in the number of nodes in the tree (helps to generate the permutations, it is considered part of the runtime of the permutations)
 
   Total work is O(n^2 * n!)
-    
-
+  
   temp -> "t" emp -> "te" mp    ANOTHER BRANCH: temp -> "e" tmp -> "et" mp memoization won't help???
   might need another algorithm to find best runtime O(n*n!)
   https://www.quora.com/What-is-the-fastest-algorithm-to-find-all-possible-permutations-of-a-string
