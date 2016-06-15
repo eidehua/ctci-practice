@@ -84,5 +84,5 @@ Example 12:
   might need another algorithm to find best runtime O(n*n!)
   https://www.quora.com/What-is-the-fastest-algorithm-to-find-all-possible-permutations-of-a-string
 
-Note: 2^1 + 2^2 + ... 2^n = 2^{n+1} - 2 (for n>=1) 
+Note: 2^1 + 2^2 + ... 2^n = 2^{n+1} - 2 (for n>=1)  (so still order O(2^n)
   
