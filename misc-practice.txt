@@ -1,6 +1,21 @@
 miscellaneous practice problems
 
-Find all possible pairs (a,b) and (c,d) such that a^3 + b^3 = c^3 + d^3 
+Find all possible pairs (a,b) and (c,d) such that a^3 + b^3 = c^3 + d^3m where a,b,c,d are integers between 1 and 1000
+    Brute force initial solution: Four nested loops. For every a, for every b, for every c, for every d, check the above equation.
+    O(N^4)
+    Optimization method 1: removing unneccessary work
+        Don't need the final nested loop! Given an a, b, c, there is exactly one d that would solve that above equation
+        O(N^3)
+    Optimization method 2: Duplicate work
+        Oddly enough doesn't seem to progress from the first optimization method, but is a separate way to optimize the problem. Perhaps going through the first method can help lead to the second during an interview
+        Algorithm goes through all (a,b) pairs and searches all (c,d) pairs that match
+        Aka given an (a,b) pair, want the result (a^3 + b^3) to equal (c^3 + d^3) 
+        ALWAYS ALWAYS ALWAYS think about how a hash table can help!
+        Create a hash table that maps from the sum to the pair.
+            Say (a,b) = (3,4), then (3^3 + 4^3) = 91. Store the pair (91) in a hash map of (sum, list_of_pairs)
+            Then that list of pairs are all the pairs that satisfy the original equation.
+            WHAT TO LEARN: think about hash tables, AND think about the value being a LIST of values!!!
+        O(N^2)
 
 Given a string of length S, and a longer string of length B, find all permutations of S within B.
     Optimal runtime algo: O(B) !!!
