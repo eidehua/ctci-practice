@@ -1,1 +1,6 @@
 miscellaneous practice problems
+
+Find all possible pairs (a,b) and (c,d) such that a^3 + b^3 = c^3 + d^3 
+
+Given a string of length S, and a longer string of length B, find all permutations of S within B.
+    Optimal runtime algo: O(B) !!!
