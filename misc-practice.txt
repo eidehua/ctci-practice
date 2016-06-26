@@ -19,3 +19,11 @@ Find all possible pairs (a,b) and (c,d) such that a^3 + b^3 = c^3 + d^3m where a
 
 Given a string of length S, and a longer string of length B, find all permutations of S within B.
     Optimal runtime algo: O(B) !!!
+
+
+Cool sorted array techniques
+    two sorted arrays, "merging" style: linear search O(1)
+        actually merging two sorted arrays = O(n) total 
+        what if you take a problem that is like merging, but not exactly that?
+            find all the common elements between two sorted arrays
+    one sorted array, find any element = binary search O(log n)
