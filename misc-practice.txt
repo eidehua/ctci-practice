@@ -27,3 +27,11 @@ Cool sorted array techniques
         what if you take a problem that is like merging, but not exactly that?
             find all the common elements between two sorted arrays
     one sorted array, find any element = binary search O(log n)
+
+    Binary and Hex to decimal
+        Binary 1011 --> 1*2^3 + 0*2^2 + 1*2^1 + 1^2^0 = 8+0+2+1 = 11
+        
+        Hex to decimal: A = 10, B = 11, F = 15, 10 = 16
+        Hex: F109 = (15)*16^3 + 1 * 16^2 + 0 + 9*16^0 = 61705
+        
+        conversion methods is the same. For each place in the binary or hex, get the equivalent decimal representation. Then use the correct base^exponent multiplier
