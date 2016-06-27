@@ -1,0 +1,29 @@
+Hash Tables
+  Data structure that maps keys to values for highly efficient lookup.
+  Simple implementation:
+    Array of linked lists and a hash code function.
+    Insert a key:
+      First, compute key's hash code with the hash function -> (int or long)
+        *Two different keys could have ame hash code!! (Infinite keys, finite number of ints/hashes)
+      Map the hash code to an index in the array.
+      At this index, there is a linked list of keys and values. Store key and value pair at this index. 
+        *The use of linked list is because of collisions (two keys with same hash code, OR two different hash codes that map to same array index because of wrapping around)
+  High Collisions is bad! Causes a worst case runtime of O(N), where N is number of keys
+    If everything hashes to same index, we are basically just using a linkedlist.
+  **Good hash table implementations keeps collisions to a minimum, so lookup time is O(1)
+  Balanced binary tree implementation:
+    O(log n) lookup.
+    Less space.
+    Can iterate through keys in order
+    
+ArrayList
+  O(1) amortized insertion time (list property)
+  O(1) lookup time (array property)
+  Example usage:
+  ArrayList<String> merge(String[] words, String[] more) {
+    ArrayList<String> sentence = new ArrayList<String>();
+    for (String w : words) sentence.add(w); // this for each iterator is in string order (left to write)
+    for (String w : more) sentence.add(w);
+    return sentence;
+  }
+  // http://stackoverflow.com/questions/1376934/java-for-each-loop-sort-order
