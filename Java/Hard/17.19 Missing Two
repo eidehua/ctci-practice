@@ -1,0 +1,21 @@
+// Missing Two: You are given an array with all numbers from 1 to N appearing exactly once, except for one number that is missing. 
+// How can you find the missing number in O(N) time and O(1) space? What if there were two numbers missing?
+
+// One missing
+
+// Method 1: sum technique. 
+
+// Two missing
+
+// Method 0: O(N) time and O(N) space gives an easy solution of using an additional array of size 1 to N, filling it in with numbers
+// from the initial array, then finding the gaps in the new array
+
+// Method 1: "hot swap", writing to the given array.
+// We are given an array of size N - 2. Have two extra variables that will represent the last two slots, (N-2)th and (N-1)th slots
+// For every index in the array, see if the number in that index needs swapping to the right spot in an sorted increasing array. 
+    // If so, swap to the index. Now this will display another incorrect slotted number that was previously at that index.
+    // Once this cascade of swaps stops we should be done.
+// so the outer for loop seems only to be needed to find the first unsorted element --> might be able to improve the algorithm
+
+
+
