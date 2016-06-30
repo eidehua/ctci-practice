@@ -1,0 +1,14 @@
+// Given two strings, write a method to decide if one is a permutation of the other
+// Check if they are same length
+
+// Method 1: Hash Table
+// Loop through the first string, and store all character counts into a hash map
+// Make sure the second string matches the same counts
+
+
+
+// Runtime: O(n) loop through first string + O(n) loop through second string + O(n) verify hash table = O(n)
+// Space complexity: O(n) extra space for the hash table
+
+// Method 2: 
+
