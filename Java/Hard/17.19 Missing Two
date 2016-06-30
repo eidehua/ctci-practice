@@ -18,4 +18,5 @@
 // so the outer for loop seems only to be needed to find the first unsorted element --> might be able to improve the algorithm
 
 
+// Run time: O(n), space O(1) (two extra variables!)
 
