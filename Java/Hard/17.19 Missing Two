@@ -4,6 +4,8 @@
 // One missing
 
 // Method 1: sum technique. 
+    1 + 2 + 3 + ... X + ... + N = (sum of all numbers from 1 to N)
+    Can easily get X, since we know the RHS
 
 // Two missing
 
