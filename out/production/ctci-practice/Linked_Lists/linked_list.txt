@@ -1,0 +1,10 @@
+// Data structure that represents a sequence of nodes.
+// Singly linked list: each node points to the next node in the linked list
+// Doubly linked list: each node has pointers to the next and the previous nodes
+
+// Node class
+  // Do you need a wrapper LinkedList class?
+    // What if multiple objects reference the linked list, and then the head of the linked list changes? 
+    // Some of those objects may still be pointing to the old head, if we just use a Node class
+
+// Important: Runner technique
