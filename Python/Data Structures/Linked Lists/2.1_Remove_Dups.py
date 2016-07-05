@@ -56,7 +56,7 @@ def removeDups(list):
 			prev.next = curr.next # removes curr
 		else:
 			elements[key] = True
-		prev = curr
+			prev = curr # only update prev if curr still exists as part of the linked list!
 		curr = curr.next
 
 removeDups(list)
