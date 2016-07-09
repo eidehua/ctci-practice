@@ -15,4 +15,60 @@ Bits are in binary, each bit can be set to 1 or 0
 
  0110
 +0110
-=0110 * 2 = 0110 << 1
+=0110 * 2 = 0110 << 1 = 01100 = 1100
+	Multiplying a binary number by two is like shifting 0110 left by 1
+	Make this connection easy with decimal: 923 * 10 = 923 << 1 = 9230
+	but for hex: FF * 10 = FF << 1 = FF0
+	
+ 0011
++0010
+=0101
+
+ 0011
+*0011
+=---0011
++--0011-
++-0000--
++0000---
+=0001001
+=0111
+(1 + 1 = 10) aka put a 0 in the spot, and carry the 1 over to next column
+
+0100 * 0011 = 4 * 0011 = 0011 * 2 * 2 = 0011 << 2 = 1100
+
+ 0110
+-0011
+=010(10)
+-001(01)
+=00(10)(10)
+-00(01)(01)
+=0011
+
+1101 >> 2 = 0011
+
+1101 ^ (~1101) = 1101 ^ 0010 = 1111
+^ = exclusive or (XOR). 
+XOR any number and its negation and get all 1s
+EG if you XOR a bit with its negation, you always get 1
+
+ 1000
+-0110
+=0(10)00
+-0110
+=0(1)(10)0
+=0(1)(01)0
+=0010
+
+ 1101
+^0101
+=1000
+
+REMEBER THIS ONE:
+1011 & (~0 << 2)
+think of ~0 as ~(0000....)
+=1011 & ...111100
+=1000 
+So this clears last two bits
+REMEMBER: ~0 is a SEQUENCE of ones (why??? not sure)
+
+
