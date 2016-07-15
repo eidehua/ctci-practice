@@ -1,0 +1,45 @@
+class Node {
+    public String name;
+    public Node[] children;
+}
+
+Complete binary tree: every level of tree is fully filled, except last level, which may or may not be filled and is filled left to right
+Full Binary trees: every node has either zero or two children.
+Perfect binary tree: Both full and complete. All leaf nodes on same level, and each level has max number of nodes. 
+	Has exactly 2^k - 1 nodes
+
+In order: visit left child, visit node, visit right child
+Pre order visit node, visit left child, visit right child
+Post order: visit left child, visit right child, visit node
+
+Binary Heaps: (A type of complete binary tree that upholds an invariant)
+	Min Heap: root = min
+		Upholds invariant: each node is smaller than its children
+		Insertion: insert element at the bottom, rightmost spot (maintain complete tree property).
+			Heapify up! Swap this element with it's parent if the element is < the parent.
+			O( log n) time (since tree is complete, it's "balanced" -- or closed to balanced)
+		Extracting min element:
+			It's the root!
+			If we just need the min, we can just peek at it. 
+			To extract, we do a more complicated operation:
+			Find the bottom, rightmost element, swap that with the min (root), then delete the bottom, rightmost element.
+			Now we bubble the value down, swapping it with one of its children until min heap invariant is restored.
+				Swap with the smaller of the children ALWAYS
+					Example:  20
+							10  15
+					Bad swap: 15
+							10 20
+					Good swap: 10
+							  20 15
+			O(log n)
+
+Tries (Prefix trees)
+	Good for prefixes! Website name caching!
+	A trie is a tree where characters are stored at each node. Each path down the tree represents a word
+		* nodes can be used to indicate completed words
+		A node can have 1 to ALPHABET_SIZE + 1 children! (can be a lot)
+		
+	A Trie can check if a string is a valid prefix in O(k) time
+	A hash table look up is O(1) time, but must read through all chars in the input, which takes O(K) time
+
+			
