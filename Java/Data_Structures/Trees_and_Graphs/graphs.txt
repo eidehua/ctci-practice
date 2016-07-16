@@ -1,0 +1,45 @@
+A graph is a collection of nodes and edges. Not all nodes have to have edges between them.
+Graphs can be directed or undirected.
+
+Graph representations:
+	Adjacency list. Every node stores a list of the adjacent nodes to it (neighbors)
+	
+	class Graph {
+		public Node[] nodes;
+	}
+	
+	class Node {
+		public String name;
+		public Node[] children;
+	}
+	
+	Need the graph class! since you may not be able to reach all nodes from a single one
+	
+	Adjacency matrices. NxN boolean matrix, where matrix[i][j] == true if there is an edge from i to j
+		In undirected graph, the adjacency matrix is symmetric.
+		Directed graph, may not be.
+		
+Graph Search
+Two most common ways are DFS and BFS
+
+DFS: start at root, and keep exploring "deeper", as in keep following children after children until we reach a node without any children.
+	This leads to a natural recursive definition (can still get a iterative solution)
+	Explores every branch before moving on to another branch.
+		EG if the root has two children, A and B, and say root picks A to search to first, then we will search the entire sub-graph from A before moving to BFS
+
+BFS: Start at root, and explore all neighbors before going to explore their children.
+	Main way: iterative solution with queue
+		node A visit's each of A's neighbors before visitng any of their neighbors.
+		(enqueue every neighbor to process)
+	Can also be thought of as "level" base search. 
+		Search through all nodes in a level before moving to next level.
+			Every time you move from parent to child, your "level" variable increases by one
+	
+	
+Bidirectional search
+	Faster way of finding shortest path between a source and destination node!
+		Runs two simultaneous BFS searches, one from the source s and one from the destination t
+		BFS is better for shortest path search-- dfs can go on a completely wrong branch and take forever
+		
+	Explanation:
+		
