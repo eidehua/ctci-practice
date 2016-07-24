@@ -1,0 +1,26 @@
+Stacks:
+Last in first out (LIFO)
+Allows quick access to the latest items
+So it is good when we need access to the most recent items, and are okay with slow downs with older items.
+	EG search results -- users may not click on results very far down + users like to click the first few links
+		stack could be a good data structure
+Good for recursive algorithms
+	ada
+
+Can be implemented using nodes, similar to linked list
+	Have a "top" node (vs "head" node)
+	pop = return top.data and also  top = top.next
+	push = create a new node, then make that the new top
+Can be implemented using a linked list as base
+
+
+Can be implemented using an array as base
+
+
+
+Queues:
+
+Good for queuing!
+	Eg receiving multiple events, and processing them on first come first serve basis
+	BFS
+	implementing cache	
