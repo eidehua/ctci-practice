@@ -43,4 +43,25 @@ Tries (Prefix trees)
 	A hash table look up is O(1) time, but must read through all chars in the input, which takes O(K) time
 
 
-			
+Balanced Trees
+Balanced tree definition: at curr node, the height diff between left subtree and right subtree should not be greater than one
+
+          (A)
+      (B)      (C)
+    (D) (E)  (F)  (G)
+  (H)(I) (J)       (K)
+(L)
+
+Above tree is valid:
+	A: left 4, right 3
+	B: left 3, right 2
+	C: left 1, right 2
+	D: left 2, right 1
+	E: left 0, right 1
+	F: leaf
+	G: left 0, right 1
+	H: left 1, right 0
+	I: leaf
+	J: leaf
+	K: leaf
+	L: leaf			
